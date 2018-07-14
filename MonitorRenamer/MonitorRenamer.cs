@@ -77,7 +77,7 @@ namespace MonitorRenamer
                     registryKey.SetValue("DeviceDesc", displayName, RegistryValueKind.String);
                     registryKey.SetValue("FriendlyName", displayName, RegistryValueKind.String);
 
-                    MessageBox.Show("Done!");
+                    MessageBox.Show(monitorItem.DeviceName + " renamed to " + displayName + ".", "Success");
                 }
                 catch (SecurityException)
                 {
@@ -90,7 +90,7 @@ namespace MonitorRenamer
             }
             else
             {
-                MessageBox.Show("Enter a display name.");
+                MessageBox.Show("Enter a display name.", "Error");
             }
         }
 
